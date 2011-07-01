@@ -1,0 +1,15 @@
+#N canvas 395 328 450 300 10;
+#X obj 123 142 fileosc~;
+#X obj 168 203 print FIM;
+#X obj 122 223 output~;
+#X msg 134 103 bang;
+#X msg 123 59 open fileosc~-entrada.txt;
+#X msg 331 139 \; pd dsp 1;
+#X obj 331 108 loadbang;
+#X text 121 30 aumente o volume \, depois clique em open e bang;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 0 1 1 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 5 0;
